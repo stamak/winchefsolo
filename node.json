@@ -1,0 +1,9 @@
+{
+	"iis": {
+		"accept_eula" : true
+		},
+	"run_list": [
+		"recipe[sql_server::server]",
+		"recipe[iis]"
+		]
+}
