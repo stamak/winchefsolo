@@ -3,6 +3,6 @@
 
 
 Before using them, do actions below:
-* Install a chef-client
-* Download this git repo 
-* Enter command: chef-solo -c solo.rb -j node.json
+* Install Chef Client <code>bitsadmin /transfer "chef" http://www.opscode.com/chef/install.msi c:\chef.msi</code>
+* Download this git repo <code>git clone https://github.com/stamak/winchefsolo.git</code>
+* Enter command: <code>chef-solo -c solo.rb -j node.json</code>
