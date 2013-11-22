@@ -2,7 +2,11 @@
 
 
 
-Before using them, do actions below:
+Before using them, do actions below in PowerShell as Administrator:
 * Install Chef Client <code>msiexec /qn /i  http://www.opscode.com/chef/install.msi</code>
-* Download this git repo <code>git clone https://github.com/stamak/winchefsolo.git</code>
-* Enter command: <code> C:\opscode\chef\bin\chef-solo -c solo.rb -j node.json</code>
+* Make the directory <code> new-item c:\tmp -itemtype directory </code>
+* Download and install Git <code> Invoke-WebRequest http://msysgit.googlecode.com/files/Git-1.8.4-preview20130916.exe -OutFile c:\chef\git-1.8.4.exe </code>
+* <code> C:\tmp\git-1.8.4.exe</code>
+* <code> Get-ChildItem -Path c:\tmp -Recurse | Remove-Item -force -recurse</code>
+* Open Git bash and download this git repo <code>git clone https://github.com/stamak/winchefsolo.git /c/chef/</code>
+* Then again in PS enter command: <code> C:\opscode\chef\bin\chef-solo -c C:\chef\solo.rb -j C:\node.json</code>
